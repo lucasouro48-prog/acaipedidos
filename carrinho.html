@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Carrinho</title>
+<link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head>
+<body onload="renderCartTable()">
+<header>
+  <img src="logo.jpeg" class="logo" alt="logo">
+  <div class="brand" data-translate>Meu Pedido</div>
+  <nav>
+    <a href="index.html" data-translate>Início</a>
+    <a href="cremes.html" data-translate>Cremes</a>
+    <a href="acompanhamentos.html" data-translate>Acompanhamentos</a>
+    <a href="adicionais.html" data-translate>Adicionais</a>
+    <a href="carrinho.html" data-translate>Carrinho (<span id="cart-count">0</span>)</a>
+    <select onchange="translatePage(this.value)">
+      <option value="">Idioma</option><option value="en">English</option><option value="es">Español</option>
+    </select>
+  </nav>
+</header>
+<div class="container">
+  <div class="card">
+    <h2 data-translate>Revisão do pedido</h2>
+    <div class="cart-panel">
+      <table class="table" style="width:100%">
+        <thead><tr><th data-translate>Produto</th><th data-translate>Qtd</th><th data-translate>Preço</th><th data-translate>Total</th><th></th></tr></thead>
+        <tbody id="cartTableBody"></tbody>
+      </table>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+        <div><strong data-translate>Total:</strong> <span id="cartTotal">R$0,00</span></div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <label data-translate> Mesa: <select id="mesa"><option value='1'>Mesa 1</option><option value='2'>Mesa 2</option><option value='3'>Mesa 3</option><option value='4'>Mesa 4</option><option value='5'>Mesa 5</option><option value='6'>Mesa 6</option><option value='7'>Mesa 7</option><option value='8'>Mesa 8</option><option value='9'>Mesa 9</option><option value='10'>Mesa 10</option><option value='11'>Mesa 11</option><option value='12'>Mesa 12</option><option value='13'>Mesa 13</option><option value='14'>Mesa 14</option><option value='15'>Mesa 15</option></select></label>
+          <label data-translate> Nome: <input id="nome" placeholder="Nome" /></label>
+          <label data-translate> Pagamento: 
+            <select id="pagamento"><option>Dinheiro</option><option>Pix</option><option>Cartão</option></select>
+          </label>
+          <label><input type="checkbox" id="delivery" /> <span data-translate>Delivery</span></label>
+        </div>
+      </div>
+      <div style="margin-top:12px;display:flex;gap:12px;justify-content:flex-end">
+        <button class="cta" onclick="sendOrderToWhatsApp()" data-translate>Enviar pedido via WhatsApp</button>
+        <button onclick="clearCart()" style="background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:10px" data-translate>Limpar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

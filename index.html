@@ -1,0 +1,73 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Açaí Que Te Surpreende</title>
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<header>
+  <img src="logo.jpeg" class="logo" alt="logo">
+  <div class="brand" data-translate>Açaí Que Te Surpreende</div>
+  <nav>
+    <a href="index.html" data-translate>Início</a>
+    <a href="cremes.html" data-translate>Cremes</a>
+    <a href="acompanhamentos.html" data-translate>Acompanhamentos</a>
+    <a href="adicionais.html" data-translate>Adicionais</a>
+    <a href="carrinho.html" data-translate>Carrinho (<span id="cart-count">0</span>)</a>
+    <select onchange="translatePage(this.value)">
+      <option value="">Idioma</option>
+      <option value="en">English</option>
+      <option value="es">Español</option>
+    </select>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="hero">
+    <div class="ribbon" data-translate>Promoção: combo econômico!</div>
+    <div class="hero-left">
+      <h1 class="headline" data-translate>Açaí que <span style="color:var(--accent)">te surpreende</span>!</h1>
+      <p class="subtitle" data-translate>O sabor da felicidade em cada colherada — prepare seu açaí na hora.</p>
+      <div style="display:flex;gap:12px;align-items:center">
+        <a href="cremes.html"><button class="cta" data-translate>Monte seu pedido 🍧</button></a>
+        <button class="cta" style="background:transparent;border:2px solid rgba(199,255,0,0.18);color:var(--muted)" onclick="document.querySelector('.sections').scrollIntoView({behavior:'smooth'})" data-translate>Ver vantagens</button>
+      </div>
+      <div class="features" style="margin-top:16px">
+        <div class="feature" data-translate>Ingredientes frescos</div>
+        <div class="feature" data-translate>Entrega rápida</div>
+        <div class="feature" data-translate>Montagem personalizável</div>
+      </div>
+    </div>
+    <div style="width:260px">
+      <div style="height:160px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(0,0,0,0.4)">
+        <div style="text-align:center">
+          <div style="font-weight:900;font-size:20px;color:var(--accent)" data-translate>Peça agora</div>
+          <div style="margin-top:8px" data-translate>Rápido, gostoso e prático</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sections">
+    <div class="card">
+      <h3 data-translate>Monte do seu jeito</h3>
+      <p data-translate>Escolha o creme, adicione frutas e finalize com adicionais deliciosos.</p>
+      <ul>
+        <li data-translate>Açaí Tradicional 400ml • R$13,00</li>
+        <li data-translate>Açaí Tradicional 500ml • R$15,00</li>
+        <li data-translate>Creme de Ninho 400ml • R$13,00</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 data-translate>Contato</h3>
+      <p data-translate>WhatsApp: (84) 99169-4314</p>
+      <p data-translate>Instagram: @acaiqueSurpreende</p>
+      <p data-translate>Funcionamento: 09:00 - 22:00</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
