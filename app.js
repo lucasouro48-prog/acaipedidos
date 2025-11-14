@@ -64,7 +64,7 @@ function sendOrderToWhatsApp(){
   const delivery = document.getElementById('delivery').checked ? 'Sim' : 'Não';
   let text = `Pedido%0ACliente: ${nome}%0AMesa: ${mesa}%0APagamento: ${pagamento}%0ADelivery: ${delivery}%0AItens:%0A`;
   cart.forEach(c=>{ text += `- ${c.name} x${c.qty} (${c.price})%0A`; });
-  const phone = '5584991694314';
+  const phone = '558498813-3251';
   const url = `https://wa.me/${phone}?text=${text}`;
   window.open(url, '_blank');
 }
